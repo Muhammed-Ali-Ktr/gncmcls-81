@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Genç Meclis Simülasyonu programı, geri sayım ve etkinlik takvimi." />
+  <title>Program | Genç Meclis Simülasyonu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <div id="site-header-placeholder"></div>
+
+    <main>
+      <section class="page-hero section--relative">
+        <span class="glow-orb glow-orb--cyan" aria-hidden="true"></span>
+        <div class="container" data-reveal>
+          <img class="page-hero-logo-mark" src="assets/images/logo.png" alt="Genç Meclis Simülasyonu" width="128" height="128" loading="eager" decoding="async" />
+          <div class="section-eyebrow">Takvim</div>
+          <h1>Program</h1>
+          <p class="lead" style="margin:0;">17-18-19 Nisan 2026 etkinlik takvimi, gün bazlı akış ve mekân bilgilerini bu sayfada bulabilirsiniz.</p>
+        </div>
+      </section>
+
+      <!-- Geri sayım: data-target ISO tarih ile özelleştirilebilir -->
+      <section class="section" aria-labelledby="cd-title">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="cd-title">Etkinliğe kalan süre</h2>
+          </header>
+          <p id="countdown-done" class="countdown-done" style="display:none;color:var(--success);margin-bottom:1rem;">Etkinlik başladı / tarih doldu — kayıt masasına danışın.</p>
+          <div id="event-countdown" class="glass countdown-grid" data-target="2026-04-17T10:00:00+03:00" data-reveal>
+            <div class="countdown-item" data-unit="gn"><div class="countdown-value">0</div><div class="countdown-label">Gün</div></div>
+            <div class="countdown-item" data-unit="ss"><div class="countdown-value">00</div><div class="countdown-label">Saat</div></div>
+            <div class="countdown-item" data-unit="dk"><div class="countdown-value">00</div><div class="countdown-label">Dakika</div></div>
+            <div class="countdown-item" data-unit="sn"><div class="countdown-value">00</div><div class="countdown-label">Saniye</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2>Etkinlik akışı (saatlik)</h2>
+            <p class="lead">Aşağıdaki çizelge 3 günlük programın örnek operasyon akışını gösterir.</p>
+          </header>
+          <div class="glass card-body timeline" data-reveal>
+            <div class="timeline-item"><time>08:30</time><p>Kayıt ve karşılama</p></div>
+            <div class="timeline-item"><time>09:15</time><p>Açılış konuşmaları ve güvenlik brifingi</p></div>
+            <div class="timeline-item"><time>10:00</time><p>Komisyon oturumu — 1. blok</p></div>
+            <div class="timeline-item"><time>12:00</time><p>Öğle arası</p></div>
+            <div class="timeline-item"><time>13:30</time><p>Komisyon oturumu — 2. blok</p></div>
+            <div class="timeline-item"><time>15:30</time><p>Kahve ve grup içi mutabakat</p></div>
+            <div class="timeline-item"><time>17:00</time><p>Genel kurul — özet okumaları</p></div>
+            <div class="timeline-item"><time>18:30</time><p>Gün sonu değerlendirmesi</p></div>
+            <div class="timeline-item" style="padding-bottom:0;"><time>19:30</time><p>Sosyal program / serbest zaman</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2>Takvim görünümü</h2>
+            <p class="lead">Program 17, 18 ve 19 Nisan 2026 tarihlerinde Konya/Karatay'da gerçekleştirilecektir.</p>
+          </header>
+          <div class="glass card-body" data-reveal>
+            <div class="cal-strip" role="list">
+              <div class="cal-day" role="listitem"><strong>15</strong>Nis Çar</div>
+              <div class="cal-day" role="listitem"><strong>16</strong>Nis Per</div>
+              <div class="cal-day is-highlight" role="listitem"><strong>17</strong>Nis Cum<span style="display:block;font-size:0.7rem;color:var(--accent);margin-top:0.25rem;">Gün 1</span></div>
+              <div class="cal-day is-highlight" role="listitem"><strong>18</strong>Nis Cmt<span style="display:block;font-size:0.7rem;color:var(--accent);margin-top:0.25rem;">Gün 2</span></div>
+              <div class="cal-day is-highlight" role="listitem"><strong>19</strong>Nis Paz<span style="display:block;font-size:0.7rem;color:var(--accent);margin-top:0.25rem;">Gün 3</span></div>
+            </div>
+          </div>
+          <p data-reveal style="margin-top:1.5rem;">
+            <a class="btn btn-primary" href="assets/pdf/program.pdf" download>Program PDF indir</a>
+            <a class="btn btn-ghost" href="basvuru.html">Başvuru</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="harita">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2>Etkinlik konumu</h2>
+            <p class="lead">Ali Ulvi Kurucu Gençlik Merkezi, Konya/Karatay.</p>
+          </header>
+          <div
+            id="map-lazy"
+            class="map-embed"
+            data-map-src="https://www.google.com/maps?q=Ali+Ulvi+Kurucu+Genclik+Merkezi+Karatay+Konya&output=embed"
+            data-title="Ali Ulvi Kurucu Gençlik Merkezi, Karatay/Konya"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer-placeholder"></div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animation.js" defer></script>
+  <script src="assets/js/countdown.js" defer></script>
+  <script src="assets/js/map.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Genç Meclis Simülasyonu — Türkiye genelinde gençlik parlamentosu deneyimi. Demokrasi, münazara ve sorumlu vatandaşlık." />
+  <title>Genç Meclis Simülasyonu | Ana Sayfa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body>
+  <!-- Tam ekran yükleme: giris.mp4 + logo animasyonu -->
+  <div id="loading-screen" aria-live="polite">
+    <div class="loading-video-wrap" aria-hidden="true">
+      <video id="loading-intro-video" src="assets/videos/giris.mp4" autoplay muted playsinline poster="assets/images/logo.png"></video>
+    </div>
+    <div class="loading-overlay"></div>
+    <div class="loading-logo-wrap">
+      <div class="loading-logo-ring" aria-hidden="true"></div>
+      <img class="loading-logo" src="assets/images/logo.png" alt="Genç Meclis Simülasyonu" width="280" height="280" decoding="async" fetchpriority="high" />
+    </div>
+    <div class="loading-text">Genç Meclis Simülasyonu</div>
+    <p class="loading-sub">Demokrasi pratiği · Genç enerji · Kurumsal işleyiş</p>
+    <button type="button" class="skip-intro">Devam Et!</button>
+  </div>
+
+  <div class="page-wrap">
+    <div id="site-header-placeholder"></div>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-video-bg" aria-hidden="true">
+          <div class="hero-video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/gfu-Hl3dV28?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=gfu-Hl3dV28&amp;controls=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;iv_load_policy=3"
+              title="TBMM'nin 100. yılı etkinlikleri tanıtım videosu"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="eager"
+            ></iframe>
+          </div>
+        </div>
+        <div class="hero-gradient"></div>
+        <div class="container">
+          <img class="hero-logo-mark" src="assets/images/logo.png" alt="Genç Meclis Simülasyonu" width="120" height="120" loading="eager" decoding="async" data-reveal />
+          <div class="hero-badge"><span></span> Başvurular açık</div>
+          <h1 id="hero-title" data-reveal>Karatay Genç Meclis Simülasyonu</h1>
+          <p class="lead" data-reveal>Türkiye genelinden lise öğrencilerini bir araya getiren 250 kişilik programda, 6 komisyonda aktif rol alarak karar alma süreçlerini deneyimleyin.</p>
+          <div class="btn-group" data-reveal>
+            <a class="btn btn-primary" href="basvuru.html">Başvur</a>
+            <a class="btn btn-ghost" href="hakkimizda.html">Daha fazla</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vizyon / Misyon / Amaç -->
+      <section class="section section--relative" id="vizyon" aria-labelledby="heading-vm">
+        <span class="glow-orb glow-orb--cyan" aria-hidden="true"></span>
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Kimlik</div>
+            <h2 id="heading-vm">Vizyon · Misyon · Amaç</h2>
+            <p class="lead">Karatay Genç Meclis; gençleri ortak tartışma zemininde buluşturur, demokratik kültürü güçlendirir.</p>
+          </header>
+          <div class="grid-3 stagger-children">
+            <article class="glass card-body" data-reveal>
+              <div class="card-icon" aria-hidden="true">◇</div>
+              <center><h3>Vizyonumuz</h3></center>
+              <p>Karatay Genç Meclis; düşünceye değer veren, farklılıklara saygı duyan ve diyalogla çözüm üreten bir gençlik anlayışını yaygınlaştırmayı amaçlar.
+                Vizyonumuz; Demokratik kültürü benimsemiş, eleştirel düşünebilen ve gelecekte söz sahibi olmaya hazır
+                gençlerden oluşan güçlü bir fikir topluluğu oluşturmaktır.
+                Ulusal ölçekte saygın ve örnek gösterilen bir gençlik platformu olmayı hedefliyoruz.</p>
+            </article>
+            
+
+            <article class="glass card-body" data-reveal>
+              <div class="card-icon" aria-hidden="true">○</div>
+              <center><h3>Amaç</h3></center>
+              <p>Karatay Genç Meclisi’nin amacı; gençlerin eleştirel düşünen, sorumluluk alan ve çözüm üreten 
+                bireyler olarak yetişmesini sağlamaktır. Bu doğrultuda katılımcıların demokratik süreçleri deneyimlemeleri, 
+                farklı görüşlere saygı çerçevesinde kendilerini ifade edebilmeleri ve toplumsal konulara duyarlılık kazanmaları hedeflenir.
+
+              Ayrıca gençlerin liderlik, iletişim ve iş birliği becerlerini geliştirerek, 
+              aktif ve bilinçli bireyler olarak topluma katkı sağlamaları amaçlanmaktadır.</p>
+            </article>
+          
+            <article class="glass card-body" data-reveal>
+              <div class="card-icon" aria-hidden="true">◆</div>
+              <center><h3>Misyonumuz</h3></center>
+              <p>Karatay Genç Meclisi, gençleri ortak tartışma zemininde buluşturan bir meclis simülasyonudur.
+                Amacımız; araştıran, sorgulayan, müzakere edebilen,
+                fikirlerini medeni ve özgür bir şekilde savunabilen bireyler
+                yetiştirmektir.
+                Katılımcılar güncel meseleleri farklı açılardan değerlendirir,
+                çözümler üretir; liderlik, hitabet ve teslim becerilerini geliştirir.
+                Hedefimiz, konuşan değil, sorumluluk alan aktif bireyler kazandırmaktır.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Tanıtım -->
+      <section class="section" id="tanitim" aria-labelledby="heading-intro">
+        <div class="container intro-panel">
+          <div class="intro-logo glass" data-reveal="fade-left">
+            <img src="assets/images/logo.png" alt="Genç Meclis Simülasyonu logosu" width="200" height="200" loading="lazy" />
+            <p><strong>250 kişilik ulusal organizasyon</strong></p>
+            <p style="font-size:0.95rem;">Hedef kitle Türkiye geneli lise öğrencileridir. Etkinlik 17-18-19 Nisan 2026 tarihlerinde Konya/Karatay'da düzenlenir.</p>
+            <p style="font-size:0.95rem;"><strong>Proje sahibi:</strong> Mevlana Kız Anadolu İmam Hatip Lisesi · <strong>Kurucu:</strong> Dilara Adıyaman.</p>
+            <p style="font-size:0.95rem;"><strong>İş birliği:</strong> Karatay Gençlik Meclisi · <strong>Sponsor:</strong> Karatay Belediyesi.</p>
+          </div>
+          <div data-reveal="fade-right">
+            <h2 id="heading-intro" class="section-eyebrow" style="margin-bottom:0.5rem;">Tanıtım filmi</h2>
+            <h3 style="margin-top:0;">Tanıtım metni</h3>
+            <p>Karatay Genç Meclis Simülasyonu, Türkiye genelinden lise öğrencilerini bir araya getirerek gençlerin düşünce, ifade ve temsil becerilerini geliştirmeyi amaçlayan kapsamlı bir organizasyondur. Katılımcılar Milli Eğitim, Adalet, Tarım-Orman ve Köyişleri, İçişleri, Dışişleri ve Anayasa komisyonlarında aktif rol alır.</p>
+            <p>Etkinlik; fikir üretme, tartışma ve çözüm geliştirme becerilerini güçlendirmeyi hedefler. Detaylı bilgi için: <a href="mailto:gencmeclissimulasyonu@gmail.com">gencmeclissimulasyonu@gmail.com</a> · <a href="https://www.instagram.com/karataygencmeclis/" target="_blank" rel="noopener noreferrer">@karataygencmeclis</a></p>
+            <div class="video-wrap" style="margin-top:1rem;">
+              <video controls preload="none" poster="assets/images/logo.png" loading="lazy">
+                <source src="assets/videos/tanitim.mp4" type="video/mp4" />
+                Video oynatılamıyor.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ekip -->
+      <section class="section section--relative" id="ekip" aria-labelledby="heading-team">
+        <span class="glow-orb glow-orb--violet" aria-hidden="true"></span>
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Ekip</div>
+            <h2 id="heading-team">Organizasyon Ekibi</h2>
+            <p class="lead">Proje sahibi okul, kurucu ekip, iş birlikçisi kurum ve sponsor desteğiyle sahada güçlü bir organizasyon yürütülür.</p>
+          </header>
+          <div class="grid-3 stagger-children">
+            <article class="glass team-card" data-reveal>
+              <img src="assets/images/ekip/ekip-1.svg" alt="Genel koordinasyon görseli" width="640" height="480" loading="lazy" />
+              <div class="card-body">
+                <span class="role">Genel Koordinasyon</span>
+                <h3>Program omurgası</h3>
+                <p>Takvim, mekan ve paydaş iletişimini yöneten çekirdek ekip.</p>
+              </div>
+            </article>
+            <article class="glass team-card" data-reveal>
+              <img src="assets/images/ekip/ekip-2.svg" alt="Akademi ekibi" width="640" height="480" loading="lazy" />
+              <div class="card-body">
+                <span class="role">Kurucu Ekip</span>
+                <h3>İçerik tasarımı</h3>
+                <p>Komisyon ödevleri, münazara formatları ve değerlendirme rubrikleri.</p>
+              </div>
+            </article>
+            <article class="glass team-card" data-reveal>
+              <img src="assets/images/ekip/ekip-3.svg" alt="Saha ekibi" width="640" height="480" loading="lazy" />
+              <div class="card-body">
+                <span class="role">Saha Ekibi</span>
+                <h3>Katılımcı deneyimi</h3>
+                <p>Kayıt, yönlendirme ve etkinlik günlüğü ile anlık koordinasyon.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ekip videoları -->
+      <section class="section" aria-labelledby="heading-videos">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Sahnede</div>
+            <h2 id="heading-videos">Ekibimizden kısa videolar</h2>
+            <p class="lead">Altı farklı rolün hikâyesi: hazırlık, prova ve etkinlik günü ritmi.</p>
+          </header>
+          <div class="video-grid stagger-children">
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip1.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 1 — Kurumsal iletişim</h3>
+                <p>Dış paydaşlar ve katılımcı soruları için şeffaf iletişim hattı.</p>
+              </div>
+            </article>
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip2.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 2 — Kurul başkanlığı</h3>
+                <p>Oturum yönetimi ve prosedür disiplini.</p>
+              </div>
+            </article>
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip3.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 3 — Komisyon raporculuğu</h3>
+                <p>Taslak metinlerden nihai rapora uzanan süreç.</p>
+              </div>
+            </article>
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip4.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 4 — Parti grupları</h3>
+                <p>Pazarlık, önceliklendirme ve uzlaşı arayışı.</p>
+              </div>
+            </article>
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip5.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 5 — Basın &amp; medya</h3>
+                <p>Dokümantasyon ve kamusal anlatı.</p>
+              </div>
+            </article>
+            <article class="glass video-card" data-reveal>
+              <div class="video-wrap">
+                <video controls preload="none" poster="assets/images/logo.png" data-lazy-src="assets/videos/ekip6.mp4" loading="lazy"></video>
+              </div>
+              <div class="card-body">
+                <h3>Ekip 6 — Teknik altyapı</h3>
+                <p>Oylama ekranları ve oturum kayıtları.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Komisyon önizleme -->
+      <section class="section section--relative" id="komisyonlar-ozet" aria-labelledby="heading-kom">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Komisyonlar</div>
+            <h2 id="heading-kom">6 komisyon, tek meclis kültürü</h2>
+            <p class="lead">Milli Eğitim, Adalet, Tarım-Orman ve Köyişleri, İçişleri, Dışişleri ve Anayasa komisyonlarında gündem odaklı çalışma yapılır.</p>
+          </header>
+          <div class="grid-2 stagger-children">
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/mekomisyonu.jpg" data-lightbox data-src="assets/images/komisyonlar/mekomisyonu.jpg" data-caption="Milli Eğitim Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/mekomisyonu.jpg" alt="Milli Eğitim Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>Milli Eğitim Komisyonu</h3>
+              <p>4+4+4 yapısının verimliliği, değerlendirme sistemi ve sosyal-akademik denge.</p>
+              <a href="komisyonlar.html#kom-meb">Detaylar →</a>
+            </article>
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/adaletkomisyonu.jpg" data-lightbox data-src="assets/images/komisyonlar/adaletkomisyonu.jpg" data-caption="Adalet Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/adaletkomisyonu.jpg" alt="Adalet Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>Adalet Komisyonu</h3>
+              <p>Ceza adaleti, delil standartları ve adalet-vicdan dengesine ilişkin değerlendirmeler.</p>
+              <a href="komisyonlar.html#kom-adalet">Detaylar →</a>
+            </article>
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/tokkomisyon.jpg" data-lightbox data-src="assets/images/komisyonlar/tokkomisyon.jpg" data-caption="Tarım, Orman ve Köyişleri Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/tokkomisyon.jpg" alt="Tarım, Orman ve Köyişleri Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>Tarım, Orman ve Köyişleri</h3>
+              <p>Stratejik tarım arazileri, çiftçi gelir istikrarı ve genç üreticilerin kırsala entegrasyonu.</p>
+              <a href="komisyonlar.html#kom-tarim">Detaylar →</a>
+            </article>
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/icislerikomisyon.jpg" data-lightbox data-src="assets/images/komisyonlar/icislerikomisyon.jpg" data-caption="İçişleri Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/icislerikomisyon.jpg" alt="İçişleri Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>İçişleri Komisyonu</h3>
+              <p>İç güvenlik, dijital güvenlik ve afetlere karşı toplumsal hazırlık çalışmaları.</p>
+              <a href="komisyonlar.html#kom-icisleri">Detaylar →</a>
+            </article>
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/dısıslerikomisyonu.jpg" data-lightbox data-src="assets/images/komisyonlar/dısıslerikomisyonu.jpg" data-caption="Dışişleri Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/dısıslerikomisyonu.jpg" alt="Dışişleri Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>Dışişleri Komisyonu</h3>
+              <p>Türkiye'nin dış politika yönelimi, sınır güvenliği ve bölgesel kriz analizleri.</p>
+              <a href="komisyonlar.html#kom-disisleri">Detaylar →</a>
+            </article>
+            <article class="glass card-body" data-reveal>
+              <a href="assets/images/komisyonlar/anayasakomisyonu.jpg" data-lightbox data-src="assets/images/komisyonlar/anayasakomisyonu.jpg" data-caption="Anayasa Komisyonu">
+                <img class="commission-thumb" src="assets/images/komisyonlar/anayasakomisyonu.jpg" alt="Anayasa Komisyonu" loading="lazy" decoding="async" />
+              </a>
+              <h3>Anayasa Komisyonu</h3>
+              <p>Yasa tekliflerinin anayasal uyumu, temel haklar ve hukuk devleti ilkesi odağı.</p>
+              <a href="komisyonlar.html#kom-anayasa">Detaylar →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsorlar -->
+      <section class="section" id="sponsorlar" aria-labelledby="heading-sponsorlar">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Sponsorlar</div>
+            <h2 id="heading-sponsorlar">Destekleyen Kurumlar</h2>
+            <p class="lead">Projemize katkı sunan kurumlara teşekkür ederiz.</p>
+          </header>
+
+          <div class="sponsor-grid" data-reveal>
+            <figure class="glass sponsor-card">
+              <img src="assets/images/sponsor/kbsponsor.png" alt="Karatay Belediyesi" loading="lazy" decoding="async" />
+              <figcaption>Karatay Belediyesi</figcaption>
+            </figure>
+            <figure class="glass sponsor-card">
+              <img src="assets/images/sponsor/karataygenclikmeclisi.png" alt="Karatay Gençlik Meclisi" loading="lazy" decoding="async" />
+              <figcaption>Karatay Gençlik Meclisi</figcaption>
+            </figure>
+            <figure class="glass sponsor-card">
+              <img src="assets/images/sponsor/mkaihlsponsor.png" alt="Mevlana Kız Anadolu İmam Hatip Lisesi" loading="lazy" decoding="async" />
+              <figcaption>Mevlana Kız Anadolu İmam Hatip Lisesi</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Günlük özet -->
+      <section class="section" id="gunluk" aria-labelledby="heading-days">
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <div class="section-eyebrow">Akış</div>
+            <h2 id="heading-days">Üç günün özeti</h2>
+            <p class="lead">Her gün; oturumlar, komisyon çalışmaları ve akşam değerlendirmeleriyle ilerler. Aşağıda görseller ve gün özeti videoları.</p>
+          </header>
+
+          <div class="day-block" data-reveal>
+            <h3 class="day-label"><span>Gün 1</span> Açılış ve komisyonlar</h3>
+            <div class="day-content">
+              <div class="thumb-grid">
+                <a href="assets/images/galeri/gun1/g1-1.svg" data-lightbox data-src="assets/images/galeri/gun1/g1-1.svg" data-caption="Gün 1 — Açılış"><img src="assets/images/galeri/gun1/g1-1.svg" alt="Gün 1 fotoğraf 1" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun1/g1-2.svg" data-lightbox data-src="assets/images/galeri/gun1/g1-2.svg" data-caption="Komisyon oturumu"><img src="assets/images/galeri/gun1/g1-2.svg" alt="Gün 1 fotoğraf 2" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun1/g1-3.svg" data-lightbox data-src="assets/images/galeri/gun1/g1-3.svg" data-caption="Çalışma grupları"><img src="assets/images/galeri/gun1/g1-3.svg" alt="Gün 1 fotoğraf 3" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun1/g1-4.svg" data-lightbox data-src="assets/images/galeri/gun1/g1-4.svg" data-caption="Ağ oluşturma"><img src="assets/images/galeri/gun1/g1-4.svg" alt="Gün 1 fotoğraf 4" loading="lazy" /></a>
+              </div>
+              <div class="glass video-wrap">
+                <video controls preload="none" poster="assets/images/galeri/gun1/g1-1.svg" loading="lazy">
+                  <source src="assets/videos/gun1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-block" data-reveal>
+            <h3 class="day-label"><span>Gün 2</span> Genel kurul &amp; münazara</h3>
+            <div class="day-content">
+              <div class="thumb-grid">
+                <a href="assets/images/galeri/gun2/g2-1.svg" data-lightbox data-src="assets/images/galeri/gun2/g2-1.svg" data-caption="Gün 2 — Münazara"><img src="assets/images/galeri/gun2/g2-1.svg" alt="Gün 2 fotoğraf 1" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun2/g2-2.svg" data-lightbox data-src="assets/images/galeri/gun2/g2-2.svg" data-caption="Genel kurul"><img src="assets/images/galeri/gun2/g2-2.svg" alt="Gün 2 fotoğraf 2" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun2/g2-3.svg" data-lightbox data-src="assets/images/galeri/gun2/g2-3.svg" data-caption="Oylama"><img src="assets/images/galeri/gun2/g2-3.svg" alt="Gün 2 fotoğraf 3" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun2/g2-4.svg" data-lightbox data-src="assets/images/galeri/gun2/g2-4.svg" data-caption="Protokol"><img src="assets/images/galeri/gun2/g2-4.svg" alt="Gün 2 fotoğraf 4" loading="lazy" /></a>
+              </div>
+              <div class="glass video-wrap">
+                <video controls preload="none" poster="assets/images/galeri/gun2/g2-1.svg" loading="lazy">
+                  <source src="assets/videos/gun2.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="day-block" data-reveal>
+            <h3 class="day-label"><span>Gün 3</span> Kapanış ve değerlendirme</h3>
+            <div class="day-content">
+              <div class="thumb-grid">
+                <a href="assets/images/galeri/gun3/g3-1.svg" data-lightbox data-src="assets/images/galeri/gun3/g3-1.svg" data-caption="Gün 3 — Kapanış"><img src="assets/images/galeri/gun3/g3-1.svg" alt="Gün 3 fotoğraf 1" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun3/g3-2.svg" data-lightbox data-src="assets/images/galeri/gun3/g3-2.svg" data-caption="Ödül töreni"><img src="assets/images/galeri/gun3/g3-2.svg" alt="Gün 3 fotoğraf 2" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun3/g3-3.svg" data-lightbox data-src="assets/images/galeri/gun3/g3-3.svg" data-caption="Değerlendirme"><img src="assets/images/galeri/gun3/g3-3.svg" alt="Gün 3 fotoğraf 3" loading="lazy" /></a>
+                <a href="assets/images/galeri/gun3/g3-4.svg" data-lightbox data-src="assets/images/galeri/gun3/g3-4.svg" data-caption="Hatıra"><img src="assets/images/galeri/gun3/g3-4.svg" alt="Gün 3 fotoğraf 4" loading="lazy" /></a>
+              </div>
+              <div class="glass video-wrap">
+                <video controls preload="none" poster="assets/images/galeri/gun3/g3-1.svg" loading="lazy">
+                  <source src="assets/videos/gun3.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <p data-reveal style="margin-top:2rem;"><a class="btn btn-ghost" href="galeri.html">Tüm galeriyi aç</a></p>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer-placeholder"></div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animation.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+</body>
+</html>

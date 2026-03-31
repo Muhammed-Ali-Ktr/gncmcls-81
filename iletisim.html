@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Genç Meclis Simülasyonu iletişim bilgileri ve mesaj formu." />
+  <title>İletişim | Genç Meclis Simülasyonu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <div id="site-header-placeholder"></div>
+
+    <main>
+      <section class="page-hero">
+        <div class="container" data-reveal>
+          <img class="page-hero-logo-mark" src="assets/images/logo.png" alt="Genç Meclis Simülasyonu" width="128" height="128" loading="eager" decoding="async" />
+          <div class="section-eyebrow">Bize ulaşın</div>
+          <h1>İletişim</h1>
+          <p class="lead" style="margin:0;">Sponsorluk, iş birliği ve genel sorularınız için formu doldurun veya doğrudan kanallarımızı kullanın.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid-2" style="align-items:start;">
+          <div class="glass card-body" data-reveal>
+            <h2 style="margin-top:0;">Mesaj gönder</h2>
+            <form id="iletisim-form" action="#" method="post">
+              <div class="form-group">
+                <label for="iletisim-ad">Ad Soyad</label>
+                <input type="text" id="iletisim-ad" name="ad" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="iletisim-email">E-posta</label>
+                <input type="email" id="iletisim-email" name="email" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="iletisim-konu">Konu</label>
+                <input type="text" id="iletisim-konu" name="konu" required />
+              </div>
+              <div class="form-group">
+                <label for="iletisim-mesaj">Mesaj</label>
+                <textarea id="iletisim-mesaj" name="mesaj" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Gönder</button>
+              <p style="font-size:0.85rem;margin-top:1rem;color:var(--text-muted);">Not: Bu örnek form istemci tarafında işlenmez; üretimde bir arka uç veya e-posta servisi bağlanmalıdır.</p>
+            </form>
+          </div>
+
+          <div data-reveal="fade-right">
+            <div class="glass card-body" style="margin-bottom:1.25rem;">
+              <h2 style="margin-top:0;">Doğrudan iletişim</h2>
+              <p><strong>E-posta:</strong><br /><a href="mailto:gencmeclissimulasyonu@gmail.com">gencmeclissimulasyonu@gmail.com</a></p>
+              <p><strong>Sosyal medya:</strong><br /><a href="https://www.instagram.com/karataygencmeclis/" target="_blank" rel="noopener noreferrer">@karataygencmeclis</a></p>
+              <p style="margin-bottom:0;"><strong>Adres:</strong><br />İşgalaman, Ali Ulvi Kurucu Cd., 42030 Karatay/Konya</p>
+            </div>
+            <div class="glass card-body">
+              <h3 style="margin-top:0;">Sosyal medya</h3>
+              <p style="margin:0;font-size:0.9rem;">Güncel duyurular için yukarıdaki Instagram bağlantısını veya sayfa altındaki orijinal marka simgelerini kullanın.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="harita">
+        <div class="container">
+          <h2 data-reveal>Harita</h2>
+          <div
+            id="map-lazy"
+            class="map-embed"
+            data-map-src="https://www.google.com/maps?q=Ali+Ulvi+Kurucu+Genclik+Merkezi+Karatay+Konya&output=embed"
+            data-title="Ali Ulvi Kurucu Gençlik Merkezi, Karatay/Konya"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer-placeholder"></div>
+  </div>
+
+  <a class="social-float social-float--instagram" href="https://www.instagram.com/karataygencmeclis/" target="_blank" rel="noopener noreferrer" aria-label="Instagram hesabını aç">
+    <svg class="social-float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="28" height="28">
+      <defs>
+        <linearGradient id="social-float-ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FFDC80" />
+          <stop offset="50%" stop-color="#F77737" />
+          <stop offset="100%" stop-color="#E1306C" />
+        </linearGradient>
+      </defs>
+      <rect width="24" height="24" rx="5" fill="url(#social-float-ig-grad)" />
+      <path
+        fill="#fff"
+        fill-rule="evenodd"
+        d="M12 7.25a4.75 4.75 0 1 0 .001 9.501A4.75 4.75 0 0 0 12 7.25zm0 7.85a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm5.65-8.2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"
+      />
+    </svg>
+  </a>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animation.js" defer></script>
+  <script src="assets/js/map.js" defer></script>
+  <script>
+    document.getElementById("iletisim-form")?.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Bu statik örnekte mesaj gönderilmez. Formu bir backend veya form servisine bağlayın.");
+    });
+  </script>
+</body>
+</html>

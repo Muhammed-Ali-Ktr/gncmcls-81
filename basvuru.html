@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Genç Meclis Simülasyonu başvuru formu." />
+  <title>Başvuru | Genç Meclis Simülasyonu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <div id="site-header-placeholder"></div>
+
+    <main>
+      <section class="page-hero section--relative">
+        <span class="glow-orb glow-orb--cyan" aria-hidden="true"></span>
+        <div class="container" data-reveal>
+          <img class="page-hero-logo-mark" src="assets/images/logo.png" alt="Genç Meclis Simülasyonu" width="128" height="128" loading="eager" decoding="async" />
+          <div class="section-eyebrow">Katıl</div>
+          <h1>Başvuru</h1>
+          <p class="lead" style="margin:0;">250 kişilik kontenjan için formu eksiksiz doldurun ve komisyon tercihinizi seçin.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" style="max-width:640px;">
+          <div id="basvuru-success" class="form-success" role="status">
+            Başvurunuz alındı. En kısa sürede sizinle iletişime geçeceğiz.
+          </div>
+
+          <form id="basvuru-form" class="glass card-body" data-reveal novalidate>
+            <h2 style="margin-top:0;">Başvuru formu</h2>
+
+            <div class="form-group">
+              <label for="basvuru-ad">Ad Soyad</label>
+              <input type="text" id="basvuru-ad" name="ad" autocomplete="name" />
+              <p class="field-error" data-error-for="ad">Lütfen en az 2 karakter girin.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="basvuru-okul">Okul / Kurum</label>
+              <input type="text" id="basvuru-okul" name="okul" autocomplete="organization" />
+              <p class="field-error" data-error-for="okul">Okul adını yazın.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="basvuru-email">E-posta</label>
+              <input type="email" id="basvuru-email" name="email" autocomplete="email" />
+              <p class="field-error" data-error-for="email">Geçerli bir e-posta girin.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="basvuru-telefon">Telefon</label>
+              <input type="tel" id="basvuru-telefon" name="telefon" autocomplete="tel" />
+              <p class="field-error" data-error-for="telefon">En az 10 haneli geçerli bir telefon girin.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="basvuru-komisyon">Komisyon tercihi</label>
+              <select id="basvuru-komisyon" name="komisyon">
+                <option value="">Seçiniz…</option>
+                <option value="meb">Milli Eğitim Komisyonu</option>
+                <option value="adalet">Adalet Komisyonu</option>
+                <option value="tarim">Tarım, Orman ve Köyişleri Komisyonu</option>
+                <option value="icisleri">İçişleri Komisyonu</option>
+                <option value="disisleri">Dışişleri Komisyonu</option>
+                <option value="anayasa">Anayasa Komisyonu</option>
+              </select>
+              <p class="field-error" data-error-for="komisyon">Bir komisyon seçin.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Başvuruyu gönder</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer-placeholder"></div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animation.js" defer></script>
+</body>
+</html>
