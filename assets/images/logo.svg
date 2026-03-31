@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Genç Meclis Simülasyonu</title>
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="lg2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <!-- Arka -->
+  <rect width="512" height="512" rx="112" fill="url(#lg2)"/>
+  <rect width="512" height="512" rx="112" fill="none" stroke="url(#lg)" stroke-width="8" opacity="0.55"/>
+  <!-- Soyut meclis / sütun silueti -->
+  <g fill="url(#lg)" opacity="0.95">
+    <path d="M128 380V200h56v180H128zm80 0V160h56v220H208zm80 0V220h56v160H288zm80 0V180h56v200H368z"/>
+  </g>
+  <!-- Üst yay -->
+  <path fill="none" stroke="url(#lg)" stroke-width="14" stroke-linecap="round" d="M96 160c80-88 240-88 320 0"/>
+  <!-- Merkez rozet -->
+  <circle cx="256" cy="268" r="44" fill="#0f172a" stroke="url(#lg)" stroke-width="6"/>
+  <text x="256" y="288" text-anchor="middle" fill="#e2e8f0" font-family="system-ui,sans-serif" font-size="52" font-weight="800">GM</text>
+</svg>

@@ -1,0 +1,313 @@
+/**
+ * Keyframes & loading / reveal utilities
+ */
+
+/* -------------------------------------------------------------------------- */
+/* Loading screen                                                              */
+/* -------------------------------------------------------------------------- */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #050810;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#loading-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-video-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.loading-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 16, 0.3) 0%, rgba(5, 8, 16, 0.92) 100%);
+  pointer-events: none;
+}
+
+/* Logo giriş: halka + görsel (üst üste animasyonlar çakışmasın diye ayrı katmanlar) */
+.loading-logo-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loadingLogoWrapIn 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes loadingLogoWrapIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.loading-logo-ring {
+  position: absolute;
+  width: min(260px, 68vw);
+  height: min(260px, 68vw);
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 50%;
+  border: 2px solid rgba(56, 189, 248, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(167, 139, 250, 0.12),
+    0 0 48px rgba(56, 189, 248, 0.2);
+  animation: loadingLogoRing 3.2s ease-in-out 0.3s infinite;
+}
+
+@keyframes loadingLogoRing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.loading-logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: min(200px, 44vw);
+  max-width: 240px;
+  max-height: min(32vh, 260px);
+  height: auto;
+  object-fit: contain;
+  animation: loadingLogoBreath 2.75s ease-in-out 0.45s infinite;
+  filter: drop-shadow(0 12px 32px rgba(56, 189, 248, 0.42));
+}
+
+@keyframes loadingLogoBreath {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 8px 26px rgba(56, 189, 248, 0.35));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 16px 40px rgba(167, 139, 250, 0.45));
+  }
+}
+
+.loading-text {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  letter-spacing: 0.04em;
+  text-align: center;
+  background: linear-gradient(90deg, var(--text), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: loadingFadeUp 0.85s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.loading-sub {
+  position: relative;
+  z-index: 2;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  animation: loadingFadeUp 0.85s ease-out 0.55s forwards;
+  opacity: 0;
+}
+
+@keyframes loadingFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skip-intro {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid var(--border-glass);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  animation: loadingFadeUp 0.85s ease-out 0.75s forwards;
+  opacity: 0;
+}
+
+.skip-intro:hover {
+  color: var(--text);
+  background: rgba(148, 163, 184, 0.18);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Scroll reveal (used with animation.js)                                      */
+/* -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s var(--transition),
+    transform 0.7s var(--transition);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal="fade-left"] {
+  transform: translateX(-24px);
+}
+
+[data-reveal="fade-left"].is-revealed {
+  transform: none;
+}
+
+[data-reveal="fade-right"] {
+  transform: translateX(24px);
+}
+
+[data-reveal="fade-right"].is-revealed {
+  transform: none;
+}
+
+[data-reveal="zoom"] {
+  transform: scale(0.96);
+}
+
+[data-reveal="zoom"].is-revealed {
+  transform: none;
+}
+
+/* Stagger children */
+.stagger-children > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger-children > *:nth-child(3) { transition-delay: 0.19s; }
+.stagger-children > *:nth-child(4) { transition-delay: 0.26s; }
+.stagger-children > *:nth-child(5) { transition-delay: 0.33s; }
+.stagger-children > *:nth-child(6) { transition-delay: 0.4s; }
+
+/* -------------------------------------------------------------------------- */
+/* Hero video background                                                       */
+/* -------------------------------------------------------------------------- */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* YouTube / iframe: tam alanı kaplayan 16:9 arka plan */
+.hero-video-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-video-bg iframe,
+.hero-video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 */
+  min-width: 177.78vh;
+  min-height: 100vh;
+  transform: translate(-50%, -50%) scale(1.05);
+  border: 0;
+}
+
+.hero-video-bg video {
+  object-fit: cover;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(120deg, rgba(7, 11, 18, 0.88) 0%, rgba(7, 11, 18, 0.55) 45%, rgba(15, 23, 42, 0.75) 100%),
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(56, 189, 248, 0.12), transparent);
+  pointer-events: none;
+}
+
+/* subtle grain */
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Decorative orbs                                                             */
+/* -------------------------------------------------------------------------- */
+.glow-orb {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb--cyan {
+  background: var(--accent);
+  top: -80px;
+  right: -60px;
+}
+
+.glow-orb--violet {
+  background: var(--accent-2);
+  bottom: 10%;
+  left: -100px;
+}
+
+.section--relative {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--relative > .container {
+  position: relative;
+  z-index: 1;
+}
